@@ -1,0 +1,28 @@
+body{
+    background-color: white;
+    color: black;
+    font-family: monospace;
+}
+
+h1{
+    color: lightcoral;
+    text-align: center;
+    font-size: 60px;
+}
+
+p{
+    font-size: 20px;
+}
+
+a{
+    background-color: lightcoral;
+    color: white;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: lightsalmon;
+}
