@@ -10,7 +10,12 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = sql(app)
 
+class QrCode(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    img = db.Column(db.ImageField(upload_to="qrcodes/"), nullable=False)
 
+    def __repr__(self):
+        return f"<QrCode {self.id}>"
 
 # Home route
 @app.route("/")
