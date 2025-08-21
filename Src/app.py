@@ -12,7 +12,7 @@ db = sql(app)
 
 class QrCode(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    img = db.Column(db.ImageField(upload_to="qrcodes/"), nullable=False)
+    img = db.Column(db.String(500), nullable=False)
 
     def __repr__(self):
         return f"<QrCode {self.id}>"
@@ -26,6 +26,11 @@ def home():
 @app.route("/about")
 def about():
     return render("about.html")
+
+@app.route("/generate")
+def generate_qr():
+    # Placeholder for QR code generation logic
+    return render("generate.html")
 
 # Run the app
 if __name__ == "__main__":
