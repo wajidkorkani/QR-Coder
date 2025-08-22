@@ -43,8 +43,8 @@ def generateQrImage():
         qr.add_data(text)
         qr.make(fit=True)
         img = qr.make_image(
-            fill_color="white",
-            back_color="black",
+            fill_color="black",
+            back_color="white",
         )
         buffer = io.BytesIO()
         img.save(buffer, format="png")
