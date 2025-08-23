@@ -5,8 +5,15 @@
     <link rel="stylesheet" href="{{url_for ('static', filename='css/index.css')}}">
 </head>
 <body>
-    <h1>Welcome to My Flask App 🚀</h1>
-    <p>This is the home page.</p>
-    <a href="/about">About</a>
+    <nav>
+        <a href="/">
+            <img src="{{url_for ('static', filename='images/logo.jpg')}}" alt="">
+        </a>
+        <div>
+            <a class="navLink" href="/about">About</a>
+            <a class="navLink" href="/scan">Scan</a>
+            <a href="/generate" class="navLink">Generate</a>
+        </div>
+    </nav>
 </body>
 </html>
