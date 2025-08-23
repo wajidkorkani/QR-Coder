@@ -44,3 +44,40 @@ button {
     border-radius: 5px;
     font-size: 30px;
 }
+
+.navLink{
+    text-decoration: none;
+    background-color: darkblue;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.navLink:hover{
+    background-color: lightseagreen;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 10px;
+}
+
+
+nav div{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav img{
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 2px 3px 20px 3px darkblue;
+}
