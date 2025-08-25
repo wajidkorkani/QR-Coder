@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Flask App</title>
+    <link rel="shortcut icon" href="{{url_for ('static', filename='images/logo.jpg')}}" type="image/x-icon">
     <link rel="stylesheet" href="{{url_for ('static', filename='css/index.css')}}">
 </head>
 <body>
@@ -15,5 +16,23 @@
             <a href="/generate" class="navLink">Generate</a>
         </div>
     </nav>
+    <br><br>
+    <div class="slider">
+        <img class="imgSlider" src="{{url_for ('static', filename='images/one.jpg')}}" alt="Slider">
+    </div>
+    <script>
+        let img = document.querySelector(".imgSlider")
+        let images = ["{{url_for ('static', filename='images/one.jpg')}}", "{{url_for ('static', filename='images/two.jpg')}}", "{{url_for ('static', filename='images/three.jpg')}}"]
+        let i = 1
+        function slider(){
+            if(i >= images.length){
+                i = 0
+            }
+            img.src = images[i]
+            i++
+        }
+
+        setInterval(slider, 3000)
+    </script>
 </body>
 </html>
