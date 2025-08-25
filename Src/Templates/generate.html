@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generate QR Code</title>
+    <link rel="shortcut icon" href="{{url_for ('static', filename='images/logo.jpg')}}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/generate.css') }}">
 </head>
 <body>
+    <nav>
+        <a href="/">
+            <img src="{{url_for ('static', filename='images/logo.jpg')}}" alt="">
+        </a>
+        <div>
+            <a class="navLink" href="/about">About</a>
+            <a class="navLink" href="/scan">Scan</a>
+            <a href="/generate" class="navLink">Generate</a>
+        </div>
+    </nav>
+    
     <h1>Generate QR Code</h1>
     <form action="/genqrimage" method="post">
         <input type="text" name="data" placeholder="Enter data for QR code" required>
