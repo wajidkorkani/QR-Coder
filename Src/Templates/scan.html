@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan QR Code</title>
+    <link rel="shortcut icon" href="{{url_for ('static', filename='images/logo.jpg')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scan.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/">
+            <img src="{{url_for ('static', filename='images/logo.jpg')}}" alt="">
+        </a>
+        <div>
+            <a class="navLink" href="/about">About</a>
+            <a class="navLink" href="/scan">Scan</a>
+            <a href="/generate" class="navLink">Generate</a>
+        </div>
+    </nav>
+    
+    <h1>Scan QR Code</h1>
+    <form action="/showQRCode" method="post" enctype="multipart/form-data">
+        <div class="inputDiv">
+            <input type="file" name="image" class="input" required>
+        </div>
+        <div class="cameraDiv">
+            <a href="/live-scan" class="liveScan">
+                <img src="{{url_for ('static', filename='images/camera.png')}}" alt="">
+            </a>
+        </div>
+        <div class="btnDiv">
+            <button type="submit">Scan QR Code</button>
+        </div>
+    </form>
+</body>
+</html>
