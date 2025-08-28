@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code</title>
+    <link rel="shortcut icon" href="{{url_for ('static', filename='images/logo.jpg')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for ('static', filename='css/showQRCode.css')}}">
+</head>
+<body>
+
+    <nav>
+        <a href="/">
+            <img src="{{url_for ('static', filename='images/logo.jpg')}}" alt="">
+        </a>
+        <div>
+            <a class="navLink" href="/about">About</a>
+            <a class="navLink" href="/scan">Scan</a>
+            <a href="/generate" class="navLink">Generate</a>
+        </div>
+    </nav>
+
+    <div class="container">
+            <label>Code: 
+                {% if codeResult %}
+                    {{
+                        codeResult
+                    }}
+                {% else %}
+                    No result found!
+                {% endif %}
+            </label>
+    </div>
+</body>
+</html>
