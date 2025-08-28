@@ -13,7 +13,7 @@ QR-Coder is a Flask web application for generating and scanning QR codes. It pro
 ## Installation
 1. Clone the repository:
    ```powershell
-   git clone <repo-url>
+   git clone https://github.com/wajidkorkani/QR-Coder.git
    cd QR-Coder/Src
    ```
 2. Install dependencies:
