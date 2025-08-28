@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Image</title>
+    <link rel="shortcut icon" href="{{url_for ('static', filename='images/logo.jpg')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for ('static', filename='css/generateQrImage.css')}}">
+
+</head>
+<body>
+
+    <nav>
+        <a href="/">
+            <img src="{{url_for ('static', filename='images/logo.jpg')}}" alt="">
+        </a>
+        <div>
+            <a class="navLink" href="/about">About</a>
+            <a class="navLink" href="/scan">Scan</a>
+            <a href="/generate" class="navLink">Generate</a>
+        </div>
+    </nav>
+
+    <div class="box">
+        <img src="{{url_for ('static', filename='images/qrCode.png')}}" alt="">
+    </div>
+    <div class="linkDiv">
+        <a class="downloadLink" href="{{url_for ('static', filename='images/qrCode.png')}}" download="{{url_for ('static', filename='images/qrCode.png')}}">Download</a>
+    </div>
+</body>
+</html>
