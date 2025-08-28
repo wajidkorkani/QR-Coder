@@ -1,0 +1,71 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navLink{
+    text-decoration: none;
+    background-color: darkblue;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.navLink:hover{
+    background-color: lightseagreen;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100px;
+    padding: 10px;
+}
+
+
+nav div{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav img{
+    width: 80px;
+    border-radius: 50%;
+    box-shadow: 2px 3px 20px 3px darkblue;
+}
+
+.box{
+    width: 400px;
+    margin: 0 auto;
+}
+
+.box img{
+    width: 100%;
+    height: 100%;
+}
+
+.downloadLink{
+    text-decoration: none;
+    color: white;
+    background-color: darkblue;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: 30px;
+}
+
+.downloadLink:hover{
+    background-color: lightseagreen;
+}
+
+.linkDiv{
+    width: fit-content;
+    margin: 0 auto;
+}
